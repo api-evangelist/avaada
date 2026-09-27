@@ -38,6 +38,10 @@ maintainers:
   email: info@apis.io
 
 common:
+- type: SecurityTxt
+  url: well-known/avaada-clarity-security.txt
+- type: WellKnown
+  url: well-known/avaada-well-known.yml
 - type: Security
   url: https://clarity.com/vdp
 - type: LLMsTxt

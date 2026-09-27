@@ -3,12 +3,13 @@ method: derived
 source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
 generator: derive-hosts.py
 summary:
-  hosts: 2
+  hosts: 3
   own: 2
-  other_domain: 0
+  other_domain: 1
   platform: 0
   roles:
   - api
+  - security
   - website
 hosts:
 - host: api.avaada.com
@@ -19,17 +20,28 @@ hosts:
   registrable_domain: avaada.com
   role: api
   relation: own
+- host: clarity.com
+  found_by:
+  - pointer
+  types:
+  - Security
+  serves: []
+  registrable_domain: clarity.com
+  role: security
+  relation: other-domain
 - host: www.avaada.com
   found_by:
   - pointer
-  - apis[]
   - probed
   - contract-discovery
   - well-known
   types:
+  - TermsOfService
+  - PrivacyPolicy
+  - Leadership
+  - Blog
   - Website
-  serves:
-  - docs
+  serves: []
   registrable_domain: avaada.com
   role: website
   relation: own
