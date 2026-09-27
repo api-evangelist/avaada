@@ -1,23 +1,77 @@
 aid: avaada
+
 name: Avaada
-description: 'Avaada is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.avaada.com/wp-content/uploads/SOlar-Home.jpg
+
+description: Avaada is India’s largest clean energy conglomerate, integrating solar, wind, hydro, and battery energy storage solutions. The company
+  provides affordable, round‑the‑clock power to accelerate India’s energy transition, offering renewable energy generation, green fuels, data
+  center power, and sustainability services across a global footprint.
+
 url: https://raw.githubusercontent.com/api-evangelist/avaada/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
+- Clean Energy
+- Renewable Energy
+- Solar
+- Wind
+- Battery Storage
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Security
+  url: https://clarity.com/vdp
+- type: LLMsTxt
+  url: llms/avaada-llms.txt
+- type: Hosts
+  url: hosts/avaada-hosts.yml
+- type: TermsOfService
+  url: https://www.avaada.com/terms-conditions/
+- type: PrivacyPolicy
+  url: https://www.avaada.com/privacy-policy/
+- type: Leadership
+  url: https://www.avaada.com/leadership/
+- type: Blog
+  url: https://www.avaada.com/blog/
+- type: VulnerabilityDisclosure
+  url: security/avaada-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/avaada-domain-security.yml
 - type: Website
-  url: https://www.hiive.com/securities/avaada-stock
+  url: https://www.avaada.com/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Main website loads via JavaScript and no machine‑readable API spec was found despite probing known endpoints.
+  evidence:
+  - url: https://api.avaada.com/openapi.json
+    status: 0
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

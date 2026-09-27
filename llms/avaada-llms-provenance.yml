@@ -1,0 +1,6 @@
+generated: '2026-09-26'
+method: probed
+generator: harvest-llms.py
+source: https://www.avaada.com/llms.txt
+bytes: 9378
+note: saved verbatim; the provider's own document
