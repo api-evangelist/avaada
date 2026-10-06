@@ -21,7 +21,7 @@ specificationVersion: '0.20'
 
 created: '2026-09-26'
 
-modified: '2026-09-26'
+modified: '2026-10-06'
 
 tags:
 - Clean Energy
@@ -38,6 +38,8 @@ maintainers:
   email: info@apis.io
 
 common:
+- url: https://www.avaada.com/feed/
+  type: BlogRSS
 - type: SecurityTxt
   url: well-known/avaada-clarity-security.txt
 - type: WellKnown
